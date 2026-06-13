@@ -5,41 +5,41 @@ const sectionSubtitle = document.getElementById('section-subtitle');
 
 const sectionDescriptions = {
   dashboard: 'Ringkasan sistem informasi sekolah dan aktivitas terbaru.',
-  pendaftaran: 'Kelola pendaftaran peserta didik baru, formulir, dan pengajuan data pendaftaran.',
-  'data-pendaftar': 'Lihat daftar pendaftar, status, dan informasi detail calon siswa.',
-  verifikasi: 'Verifikasi dokumen pendaftaran dan validasi data peserta didik baru.',
-  'hasil-seleksi': 'Tampilkan hasil seleksi PPDB dan pengumuman peserta yang diterima.',
-  'data-siswa': 'Kelola profil siswa, riwayat kelas, dan informasi akademik.',
-  'data-guru': 'Kelola data guru, mata pelajaran yang diampu, dan kontak.',
-  'data-kelas': 'Atur kelas, wali kelas, dan komposisi siswa setiap periode.',
-  'mata-pelajaran': 'Kelola daftar mata pelajaran dan alokasi jam pelajaran.',
-  'jadwal-pelajaran': 'Buat dan atur jadwal pelajaran untuk setiap kelas dan semester.',
-  absensi: 'Catat kehadiran siswa dan pantau rekap absensi bulanan.',
-  'input-nilai': 'Masukkan nilai siswa untuk penilaian harian, ulangan, dan tugas.',
-  'data-nilai': 'Lihat dan kelola nilai akademik siswa secara lengkap.',
-  rapor: 'Cetak rapor siswa dan lihat ringkasan perkembangan belajar.',
-  'transkrip-nilai': 'Hasil transkrip nilai untuk siswa yang pindah atau lulus.',
-  spp: 'Atur besaran SPP, jadwal pembayaran, dan informasi tagihan siswa.',
-  pembayaran: 'Catat transaksi pembayaran SPP dan konfirmasi pembayaran masuk.',
-  pemasukan: 'Kelola semua pemasukan sekolah dan rekonsiliasi anggaran.',
-  pengeluaran: 'Catat pengeluaran operasional dan kebutuhan sekolah.',
-  buku: 'Kelola daftar buku perpustakaan dan ketersediaan judul.',
-  peminjaman: 'Atur peminjaman buku siswa dan durasi pengembalian.',
-  pengembalian: 'Kelola pengembalian buku perpustakaan dan histori transaksi.',
-  'laporan-siswa': 'Ekspor laporan siswa per kelas atau angkatan.',
-  'laporan-guru': 'Ekspor laporan guru dan distribusi beban mengajar.',
-  'laporan-nilai': 'Lihat laporan nilai siswa dan tren pencapaian akademik.',
-  'laporan-absensi': 'Laporan absensi siswa secara per bulan dan persentase kehadiran.',
-  'laporan-ppdb': 'Laporan proses pendaftaran siswa baru dan hasil seleksi.',
-  'laporan-keuangan': 'Laporan pemasukan dan pengeluaran untuk akuntabilitas sekolah.',
-  jurusan: 'Atur daftar jurusan yang tersedia di sekolah.',
-  'tahun-ajaran': 'Kelola periode tahun ajaran dan status tahun berjalan.',
-  semester: 'Atur semester ganjil dan genap untuk tahun ajaran aktif.',
+  pendaftaran: 'Form PPDB lengkap dengan semua data calon siswa dan dokumen yang harus diunggah.',
+  'data-pendaftar': 'Daftar calon siswa baru dengan status pendaftaran dan tindakan verifikasi.',
+  verifikasi: 'Periksa kelengkapan berkas dan validasi data untuk setiap pendaftar.',
+  'hasil-seleksi': 'Ringkasan hasil seleksi PPDB dan daftar calon yang lulus atau tidak lulus.',
+  'data-siswa': 'Master data siswa dengan kemampuan tambah, edit, cari, dan export.',
+  'data-guru': 'Data guru lengkap dengan mata pelajaran, status, dan informasi kontak.',
+  'data-kelas': 'Kelola kelas, wali kelas, jurusan, dan jumlah siswa per kelas.',
+  'mata-pelajaran': 'Daftar mata pelajaran, kode mapel, KKM, dan guru pengampu.',
+  'jadwal-pelajaran': 'Jadwal pelajaran per kelas dengan tools generate dan cetak.',
+  absensi: 'Rekap absensi harian, bulanan, dan persentase kehadiran siswa.',
+  'input-nilai': 'Masukkan nilai tugas, ulangan, UTS, dan UAS dengan rumus otomatis.',
+  'data-nilai': 'Data nilai siswa lengkap dengan nilai akhir dan kategori predikat.',
+  rapor: 'Lihat dan cetak rapor siswa berdasarkan kelas dan semester.',
+  'transkrip-nilai': 'Generate transkrip nilai untuk kepentingan kelulusan atau pindah sekolah.',
+  spp: 'Kelola tagihan SPP siswa, periode, dan status pembayaran.',
+  pembayaran: 'Catat transaksi pembayaran SPP dan periksa bukti pembayaran.',
+  pemasukan: 'Kelola pemasukan sekolah dan total pendapatan setiap periode.',
+  pengeluaran: 'Catat pengeluaran operasional dan buat rekap biaya sekolah.',
+  buku: 'Data buku perpustakaan dengan status ketersediaan dan stok.',
+  peminjaman: 'Kelola peminjaman buku siswa dengan status pinjam dan jatuh tempo.',
+  pengembalian: 'Catat pengembalian buku dan histori transaksi perpustakaan.',
+  'laporan-siswa': 'Laporan siswa per kelas, angkatan, atau jurusan.',
+  'laporan-guru': 'Laporan guru, beban mengajar, dan distribusi mata pelajaran.',
+  'laporan-nilai': 'Laporan nilai siswa untuk analisis pencapaian akademik.',
+  'laporan-absensi': 'Laporan absensi siswa per bulan dan rekap kehadiran.',
+  'laporan-ppdb': 'Laporan proses PPDB, daftar pendaftar, dan hasil seleksi.',
+  'laporan-keuangan': 'Laporan keuangan sekolah meliputi pemasukan dan pengeluaran.',
+  jurusan: 'Master data jurusan dengan kemampuan tambah, edit, dan hapus.',
+  'tahun-ajaran': 'Atur tahun ajaran aktif dan rentang periode belajar.',
+  semester: 'Kelola semester ganjil/genap untuk tahun ajaran yang berjalan.',
   pengguna: 'Kelola akun pengguna, peran, dan hak akses sistem.',
-  'profil-sekolah': 'Edit informasi sekolah seperti nama, alamat, dan visi misi.',
-  'hak-akses': 'Atur hak akses menu dan peran pengguna sistem.',
-  'backup-database': 'Jadwalkan backup database dan unduh salinan data.',
-  'log-aktivitas': 'Pantau aktivitas pengguna dan audit sistem.'
+  'profil-sekolah': 'Update profil sekolah seperti nama, alamat, visi, dan misi.',
+  'hak-akses': 'Atur hak akses pengguna berdasarkan peran dan modul.',
+  'backup-database': 'Buat backup database dan lihat waktu backup terakhir.',
+  'log-aktivitas': 'Audit aktivitas pengguna dan riwayat perubahan sistem.'
 };
 
 function setActiveSection(sectionId) {
@@ -59,6 +59,25 @@ function setActiveSection(sectionId) {
   sectionSubtitle.textContent = sectionDescriptions[sectionId] || 'Informasi detail untuk modul ini.';
 }
 
+function computeFinalScore() {
+  const tugas = Number(document.getElementById('nilai-tugas')?.value) || 0;
+  const ulangan = Number(document.getElementById('nilai-ulangan')?.value) || 0;
+  const uts = Number(document.getElementById('nilai-uts')?.value) || 0;
+  const uas = Number(document.getElementById('nilai-uas')?.value) || 0;
+  const finalScore = Math.round((tugas * 0.3 + ulangan * 0.3 + uts * 0.2 + uas * 0.2) * 10) / 10;
+  const kategori = finalScore >= 90 ? 'A' : finalScore >= 80 ? 'B' : finalScore >= 70 ? 'C' : finalScore >= 60 ? 'D' : 'E';
+
+  const categoryInput = document.getElementById('kategori-nilai');
+  if (categoryInput) {
+    categoryInput.value = finalScore ? kategori : '';
+  }
+
+  const finalScoreDisplay = document.getElementById('nilai-akhir');
+  if (finalScoreDisplay) {
+    finalScoreDisplay.textContent = finalScore ? finalScore.toFixed(1) : '-';
+  }
+}
+
 menuLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -68,10 +87,23 @@ menuLinks.forEach((link) => {
   });
 });
 
+['nilai-tugas', 'nilai-ulangan', 'nilai-uts', 'nilai-uas'].forEach((id) => {
+  const input = document.getElementById(id);
+  if (input) {
+    input.addEventListener('input', computeFinalScore);
+  }
+});
+
 window.addEventListener('popstate', (event) => {
-  const sectionId = event.state?.section || window.location.hash.replace('#', '') || 'dashboard';
+  let sectionId = event.state?.section || window.location.hash.replace('#', '') || 'dashboard';
+  if (!document.getElementById(sectionId)) {
+    sectionId = 'dashboard';
+  }
   setActiveSection(sectionId);
 });
 
-const initialSection = window.location.hash.replace('#', '') || 'dashboard';
+let initialSection = window.location.hash.replace('#', '') || 'dashboard';
+if (!document.getElementById(initialSection)) {
+  initialSection = 'dashboard';
+}
 setActiveSection(initialSection);
