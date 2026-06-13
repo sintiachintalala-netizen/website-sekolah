@@ -74,58 +74,503 @@
       <section class="content" id="content-area">
         <div class="page-section active" id="dashboard">
           <h3>Dashboard</h3>
-          <p>Selamat datang di sistem informasi sekolah. Gunakan menu di samping untuk mengakses modul PPDB, Akademik, Penilaian, Keuangan, Perpustakaan, Laporan, Master Data, dan Pengaturan.</p>
+          <div class="dashboard-grid">
+            <div class="stats-grid">
+              <div class="card">
+                <h4>Statistik Sekolah</h4>
+                <div class="metric-list">
+                  <div class="metric-card">
+                    <p>Total Siswa</p>
+                    <div class="card-stat">1.250</div>
+                  </div>
+                  <div class="metric-card">
+                    <p>Total Guru</p>
+                    <div class="card-stat">85</div>
+                  </div>
+                  <div class="metric-card">
+                    <p>Total Kelas</p>
+                    <div class="card-stat">38</div>
+                  </div>
+                  <div class="metric-card">
+                    <p>Total Mata Pelajaran</p>
+                    <div class="card-stat">52</div>
+                  </div>
+                  <div class="metric-card">
+                    <p>Total Alumni</p>
+                    <div class="card-stat">3.420</div>
+                  </div>
+                  <div class="metric-card">
+                    <p>Total Pendaftar Baru</p>
+                    <div class="card-stat">160</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-grid">
+              <div class="card chart-card">
+                <h4>Grafik Kehadiran</h4>
+                <div class="chart-placeholder">[Chart Kehadiran]</div>
+              </div>
+              <div class="card chart-card">
+                <h4>Grafik Nilai</h4>
+                <div class="chart-placeholder">[Chart Nilai]</div>
+              </div>
+              <div class="card chart-card">
+                <h4>Grafik Pendaftaran</h4>
+                <div class="chart-placeholder">[Chart Pendaftaran]</div>
+              </div>
+              <div class="card chart-card">
+                <h4>Grafik Kelulusan</h4>
+                <div class="chart-placeholder">[Chart Kelulusan]</div>
+              </div>
+            </div>
+
+            <div class="info-grid">
+              <div class="card info-card">
+                <h4>Pengumuman</h4>
+                <p>Rapat komite sekolah akan dilaksanakan pada hari Jumat, 28 Juni 2026.</p>
+              </div>
+              <div class="card info-card">
+                <h4>Agenda Sekolah</h4>
+                <p>Ujian tengah semester dimulai tanggal 5 Juli 2026 untuk seluruh kelas.</p>
+              </div>
+              <div class="card info-card">
+                <h4>Jadwal Hari Ini</h4>
+                <p>Kelas X IPA 1: Matematika, IPA, Bahasa Indonesia, dan Olahraga.</p>
+              </div>
+              <div class="card info-card">
+                <h4>Berita Sekolah</h4>
+                <p>SMK Negeri 1 meraih juara 1 lomba robotik tingkat provinsi.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="page-section" id="pendaftaran">
-          <h3>Pendaftaran</h3>
-          <p>Kelola pendaftaran peserta didik baru, formulir, dan pengajuan data pendaftaran.</p>
+          <h3>Form Pendaftaran PPDB</h3>
+          <div class="toolbar">
+            <button class="button">Simpan</button>
+            <button class="button-secondary">Edit</button>
+            <button class="button-secondary">Hapus</button>
+            <button class="button-secondary">Cetak Formulir</button>
+          </div>
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="nomor-pendaftaran">Nomor Pendaftaran</label>
+              <input type="text" id="nomor-pendaftaran" placeholder="PPDB-2026-001" />
+            </div>
+            <div class="form-group">
+              <label for="nama-lengkap">Nama Lengkap</label>
+              <input type="text" id="nama-lengkap" placeholder="Nama Calon Siswa" />
+            </div>
+            <div class="form-group">
+              <label for="nisn">NISN</label>
+              <input type="text" id="nisn" placeholder="1234567890" />
+            </div>
+            <div class="form-group">
+              <label for="nik">NIK</label>
+              <input type="text" id="nik" placeholder="3201xxxxxxxxxxxx" />
+            </div>
+            <div class="form-group">
+              <label for="tempat-lahir">Tempat Lahir</label>
+              <input type="text" id="tempat-lahir" placeholder="Kota Lahir" />
+            </div>
+            <div class="form-group">
+              <label for="tanggal-lahir">Tanggal Lahir</label>
+              <input type="date" id="tanggal-lahir" />
+            </div>
+            <div class="form-group">
+              <label for="jenis-kelamin">Jenis Kelamin</label>
+              <select id="jenis-kelamin">
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="agama">Agama</label>
+              <select id="agama">
+                <option>Islam</option>
+                <option>Kristen</option>
+                <option>Katolik</option>
+                <option>Hindu</option>
+                <option>Budha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="alamat">Alamat</label>
+              <textarea id="alamat" placeholder="Alamat lengkap"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="nama-ayah">Nama Ayah</label>
+              <input type="text" id="nama-ayah" placeholder="Nama Ayah" />
+            </div>
+            <div class="form-group">
+              <label for="nama-ibu">Nama Ibu</label>
+              <input type="text" id="nama-ibu" placeholder="Nama Ibu" />
+            </div>
+            <div class="form-group">
+              <label for="pekerjaan-orang-tua">Pekerjaan Orang Tua</label>
+              <input type="text" id="pekerjaan-orang-tua" placeholder="Pekerjaan" />
+            </div>
+            <div class="form-group">
+              <label for="nomor-hp">Nomor HP</label>
+              <input type="text" id="nomor-hp" placeholder="0812xxxxxx" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="email@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="asal-sekolah">Asal Sekolah</label>
+              <input type="text" id="asal-sekolah" placeholder="Asal Sekolah" />
+            </div>
+            <div class="form-group">
+              <label for="nilai-rapor">Nilai Rapor</label>
+              <input type="text" id="nilai-rapor" placeholder="85.00" />
+            </div>
+            <div class="form-group">
+              <label for="jurusan-pilihan">Jurusan Pilihan</label>
+              <select id="jurusan-pilihan">
+                <option>Teknik Informatika</option>
+                <option>Akuntansi</option>
+                <option>Administrasi Perkantoran</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="upload-foto">Upload Foto</label>
+              <input type="file" id="upload-foto" />
+            </div>
+            <div class="form-group">
+              <label for="upload-akta">Upload Akta</label>
+              <input type="file" id="upload-akta" />
+            </div>
+            <div class="form-group">
+              <label for="upload-kk">Upload KK</label>
+              <input type="file" id="upload-kk" />
+            </div>
+            <div class="form-group">
+              <label for="upload-ijazah">Upload Ijazah</label>
+              <input type="file" id="upload-ijazah" />
+            </div>
+          </form>
         </div>
+
         <div class="page-section" id="data-pendaftar">
           <h3>Data Pendaftar</h3>
-          <p>Lihat daftar pendaftar, status, dan informasi detail calon siswa.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nomor</th>
+                  <th>Nama</th>
+                  <th>Jurusan</th>
+                  <th>Asal Sekolah</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PPDB-001</td>
+                  <td>Alya Putri</td>
+                  <td>Teknik Informatika</td>
+                  <td>SMPN 5</td>
+                  <td><span class="status-chip status-pending">Menunggu</span></td>
+                </tr>
+                <tr>
+                  <td>PPDB-002</td>
+                  <td>Rafi Hidayat</td>
+                  <td>Akuntansi</td>
+                  <td>SMPN 2</td>
+                  <td><span class="status-chip status-approved">Diterima</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="verifikasi">
-          <h3>Verifikasi</h3>
-          <p>Verifikasi dokumen pendaftaran dan validasi data peserta didik baru.</p>
+          <h3>Verifikasi Berkas</h3>
+          <p>Verifikasikan kelengkapan berkas PPDB dan pastikan semua dokumen valid.</p>
         </div>
         <div class="page-section" id="hasil-seleksi">
           <h3>Hasil Seleksi</h3>
-          <p>Tampilkan hasil seleksi PPDB dan pengumuman peserta yang diterima.</p>
+          <p>Tampilkan hasil seleksi PPDB dan status akhir penerimaan siswa baru.</p>
         </div>
 
         <div class="page-section" id="data-siswa">
-          <h3>Data Siswa</h3>
-          <p>Kelola profil siswa, riwayat kelas, dan informasi akademik.</p>
+          <h3>Master Data Siswa</h3>
+          <div class="toolbar">
+            <button class="button">Tambah</button>
+            <button class="button-secondary">Import Excel</button>
+            <button class="button-secondary">Export Excel</button>
+            <button class="button-secondary">Export PDF</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NIS</th>
+                  <th>Nama</th>
+                  <th>Kelas</th>
+                  <th>Jurusan</th>
+                  <th>Angkatan</th>
+                  <th>Telepon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12012002</td>
+                  <td>Citra Dewi</td>
+                  <td>X IPA 2</td>
+                  <td>IPA</td>
+                  <td>2024</td>
+                  <td>081234567890</td>
+                </tr>
+                <tr>
+                  <td>12012003</td>
+                  <td>Budi Santoso</td>
+                  <td>X IPS 1</td>
+                  <td>IPS</td>
+                  <td>2024</td>
+                  <td>081298765432</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="data-guru">
           <h3>Data Guru</h3>
-          <p>Kelola data guru, mata pelajaran yang diampu, dan kontak.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>NIP</th>
+                  <th>Nama Guru</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Pendidikan</th>
+                  <th>Mata Pelajaran</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>198712042019032001</td>
+                  <td>Dr. Rina Wijaya</td>
+                  <td>Perempuan</td>
+                  <td>S2</td>
+                  <td>Matematika</td>
+                  <td>Aktif</td>
+                </tr>
+                <tr>
+                  <td>198905072020032002</td>
+                  <td>Adi Pratama</td>
+                  <td>Laki-laki</td>
+                  <td>S1</td>
+                  <td>Bahasa Indonesia</td>
+                  <td>Aktif</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="data-kelas">
           <h3>Data Kelas</h3>
-          <p>Atur kelas, wali kelas, dan komposisi siswa setiap periode.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nama Kelas</th>
+                  <th>Tingkat</th>
+                  <th>Jurusan</th>
+                  <th>Wali Kelas</th>
+                  <th>Jumlah Siswa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>X IPA 1</td>
+                  <td>X</td>
+                  <td>IPA</td>
+                  <td>Dr. Rina Wijaya</td>
+                  <td>32</td>
+                </tr>
+                <tr>
+                  <td>X IPS 1</td>
+                  <td>X</td>
+                  <td>IPS</td>
+                  <td>Adi Pratama</td>
+                  <td>28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="mata-pelajaran">
           <h3>Mata Pelajaran</h3>
-          <p>Kelola daftar mata pelajaran dan alokasi jam pelajaran.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Kode Mapel</th>
+                  <th>Nama Mapel</th>
+                  <th>KKM</th>
+                  <th>Guru Pengampu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MTK01</td>
+                  <td>Matematika</td>
+                  <td>75</td>
+                  <td>Dr. Rina Wijaya</td>
+                </tr>
+                <tr>
+                  <td>BIND01</td>
+                  <td>Bahasa Indonesia</td>
+                  <td>70</td>
+                  <td>Adi Pratama</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="jadwal-pelajaran">
           <h3>Jadwal Pelajaran</h3>
-          <p>Buat dan atur jadwal pelajaran untuk setiap kelas dan semester.</p>
+          <div class="toolbar">
+            <button class="button">Generate Jadwal</button>
+            <button class="button-secondary">Cetak Jadwal</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Hari</th>
+                  <th>Jam</th>
+                  <th>Kelas</th>
+                  <th>Mata Pelajaran</th>
+                  <th>Guru</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Senin</td>
+                  <td>07:00 - 08:30</td>
+                  <td>X IPA 1</td>
+                  <td>Matematika</td>
+                  <td>Dr. Rina Wijaya</td>
+                </tr>
+                <tr>
+                  <td>Senin</td>
+                  <td>08:45 - 10:15</td>
+                  <td>X IPA 1</td>
+                  <td>Fisika</td>
+                  <td>Fitri Handayani</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <div class="page-section" id="absensi">
-          <h3>Absensi</h3>
-          <p>Catat kehadiran siswa dan pantau rekap absensi bulanan.</p>
+          <h3>Absensi Siswa</h3>
+          <div class="chart-grid">
+            <div class="card">
+              <h4>Status Kehadiran</h4>
+              <p>Hadir: 92%</p>
+              <p>Sakit: 3%</p>
+              <p>Izin: 4%</p>
+              <p>Alpha: 1%</p>
+            </div>
+            <div class="card chart-card">
+              <h4>Rekap Kehadiran</h4>
+              <div class="chart-placeholder">[Rekap Bulanan]</div>
+            </div>
+          </div>
         </div>
 
         <div class="page-section" id="input-nilai">
           <h3>Input Nilai</h3>
-          <p>Masukkan nilai siswa untuk penilaian harian, ulangan, dan tugas.</p>
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="siswa-nilai">Nama Siswa</label>
+              <input type="text" id="siswa-nilai" placeholder="Nama Siswa" />
+            </div>
+            <div class="form-group">
+              <label for="mapel-nilai">Mata Pelajaran</label>
+              <input type="text" id="mapel-nilai" placeholder="Matematika" />
+            </div>
+            <div class="form-group">
+              <label for="nilai-tugas">Nilai Tugas</label>
+              <input type="number" id="nilai-tugas" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label for="nilai-ulangan">Nilai Ulangan</label>
+              <input type="number" id="nilai-ulangan" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label for="nilai-uts">Nilai UTS</label>
+              <input type="number" id="nilai-uts" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label for="nilai-uas">Nilai UAS</label>
+              <input type="number" id="nilai-uas" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label for="kategori-nilai">Kategori Nilai</label>
+              <input type="text" id="kategori-nilai" placeholder="A/B/C" readonly />
+            </div>
+            <div class="form-group">
+              <label>Rumus Nilai Akhir</label>
+              <p class="metric">(30% Tugas) + (30% Ulangan) + (20% UTS) + (20% UAS)</p>
+            </div>
+          </form>
         </div>
+
         <div class="page-section" id="data-nilai">
           <h3>Data Nilai</h3>
-          <p>Lihat dan kelola nilai akademik siswa secara lengkap.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nama Siswa</th>
+                  <th>Mapel</th>
+                  <th>Tugas</th>
+                  <th>Ulangan</th>
+                  <th>UTS</th>
+                  <th>UAS</th>
+                  <th>Nilai Akhir</th>
+                  <th>Kategori</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Andi Prasetyo</td>
+                  <td>Matematika</td>
+                  <td>85</td>
+                  <td>88</td>
+                  <td>82</td>
+                  <td>90</td>
+                  <td>86.8</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>Rina Sari</td>
+                  <td>Bahasa Indonesia</td>
+                  <td>80</td>
+                  <td>84</td>
+                  <td>78</td>
+                  <td>82</td>
+                  <td>81.2</td>
+                  <td>B</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="page-section" id="rapor">
           <h3>Rapor</h3>
