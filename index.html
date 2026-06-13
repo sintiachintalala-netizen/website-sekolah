@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Sekolah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>SI Sekolah</h1>
+        <p>Manajemen Sekolah</p>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#dashboard" class="menu-link active" data-section="dashboard">Dashboard</a></li>
+          <li class="menu-header">PPDB</li>
+          <li><a href="#pendaftaran" class="menu-link" data-section="pendaftaran">Pendaftaran</a></li>
+          <li><a href="#data-pendaftar" class="menu-link" data-section="data-pendaftar">Data Pendaftar</a></li>
+          <li><a href="#verifikasi" class="menu-link" data-section="verifikasi">Verifikasi</a></li>
+          <li><a href="#hasil-seleksi" class="menu-link" data-section="hasil-seleksi">Hasil Seleksi</a></li>
+          <li class="menu-header">Akademik</li>
+          <li><a href="#data-siswa" class="menu-link" data-section="data-siswa">Data Siswa</a></li>
+          <li><a href="#data-guru" class="menu-link" data-section="data-guru">Data Guru</a></li>
+          <li><a href="#data-kelas" class="menu-link" data-section="data-kelas">Data Kelas</a></li>
+          <li><a href="#mata-pelajaran" class="menu-link" data-section="mata-pelajaran">Mata Pelajaran</a></li>
+          <li><a href="#jadwal-pelajaran" class="menu-link" data-section="jadwal-pelajaran">Jadwal Pelajaran</a></li>
+          <li><a href="#absensi" class="menu-link" data-section="absensi">Absensi</a></li>
+          <li class="menu-header">Penilaian</li>
+          <li><a href="#input-nilai" class="menu-link" data-section="input-nilai">Input Nilai</a></li>
+          <li><a href="#data-nilai" class="menu-link" data-section="data-nilai">Data Nilai</a></li>
+          <li><a href="#rapor" class="menu-link" data-section="rapor">Rapor</a></li>
+          <li><a href="#transkrip-nilai" class="menu-link" data-section="transkrip-nilai">Transkrip Nilai</a></li>
+          <li class="menu-header">Keuangan</li>
+          <li><a href="#spp" class="menu-link" data-section="spp">SPP</a></li>
+          <li><a href="#pembayaran" class="menu-link" data-section="pembayaran">Pembayaran</a></li>
+          <li><a href="#pemasukan" class="menu-link" data-section="pemasukan">Pemasukan</a></li>
+          <li><a href="#pengeluaran" class="menu-link" data-section="pengeluaran">Pengeluaran</a></li>
+          <li class="menu-header">Perpustakaan</li>
+          <li><a href="#buku" class="menu-link" data-section="buku">Buku</a></li>
+          <li><a href="#peminjaman" class="menu-link" data-section="peminjaman">Peminjaman</a></li>
+          <li><a href="#pengembalian" class="menu-link" data-section="pengembalian">Pengembalian</a></li>
+          <li class="menu-header">Laporan</li>
+          <li><a href="#laporan-siswa" class="menu-link" data-section="laporan-siswa">Laporan Siswa</a></li>
+          <li><a href="#laporan-guru" class="menu-link" data-section="laporan-guru">Laporan Guru</a></li>
+          <li><a href="#laporan-nilai" class="menu-link" data-section="laporan-nilai">Laporan Nilai</a></li>
+          <li><a href="#laporan-absensi" class="menu-link" data-section="laporan-absensi">Laporan Absensi</a></li>
+          <li><a href="#laporan-ppdb" class="menu-link" data-section="laporan-ppdb">Laporan PPDB</a></li>
+          <li><a href="#laporan-keuangan" class="menu-link" data-section="laporan-keuangan">Laporan Keuangan</a></li>
+          <li class="menu-header">Master Data</li>
+          <li><a href="#jurusan" class="menu-link" data-section="jurusan">Jurusan</a></li>
+          <li><a href="#tahun-ajaran" class="menu-link" data-section="tahun-ajaran">Tahun Ajaran</a></li>
+          <li><a href="#semester" class="menu-link" data-section="semester">Semester</a></li>
+          <li><a href="#pengguna" class="menu-link" data-section="pengguna">Pengguna</a></li>
+          <li class="menu-header">Pengaturan</li>
+          <li><a href="#profil-sekolah" class="menu-link" data-section="profil-sekolah">Profil Sekolah</a></li>
+          <li><a href="#hak-akses" class="menu-link" data-section="hak-akses">Hak Akses</a></li>
+          <li><a href="#backup-database" class="menu-link" data-section="backup-database">Backup Database</a></li>
+          <li><a href="#log-aktivitas" class="menu-link" data-section="log-aktivitas">Log Aktivitas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 id="section-title">Dashboard</h2>
+          <p id="section-subtitle">Ringkasan sistem informasi sekolah dan aktivitas terbaru.</p>
+        </div>
+      </header>
+
+      <section class="content" id="content-area">
+        <div class="page-section active" id="dashboard">
+          <h3>Dashboard</h3>
+          <p>Selamat datang di sistem informasi sekolah. Gunakan menu di samping untuk mengakses modul PPDB, Akademik, Penilaian, Keuangan, Perpustakaan, Laporan, Master Data, dan Pengaturan.</p>
+        </div>
+
+        <div class="page-section" id="pendaftaran">
+          <h3>Pendaftaran</h3>
+          <p>Kelola pendaftaran peserta didik baru, formulir, dan pengajuan data pendaftaran.</p>
+        </div>
+        <div class="page-section" id="data-pendaftar">
+          <h3>Data Pendaftar</h3>
+          <p>Lihat daftar pendaftar, status, dan informasi detail calon siswa.</p>
+        </div>
+        <div class="page-section" id="verifikasi">
+          <h3>Verifikasi</h3>
+          <p>Verifikasi dokumen pendaftaran dan validasi data peserta didik baru.</p>
+        </div>
+        <div class="page-section" id="hasil-seleksi">
+          <h3>Hasil Seleksi</h3>
+          <p>Tampilkan hasil seleksi PPDB dan pengumuman peserta yang diterima.</p>
+        </div>
+
+        <div class="page-section" id="data-siswa">
+          <h3>Data Siswa</h3>
+          <p>Kelola profil siswa, riwayat kelas, dan informasi akademik.</p>
+        </div>
+        <div class="page-section" id="data-guru">
+          <h3>Data Guru</h3>
+          <p>Kelola data guru, mata pelajaran yang diampu, dan kontak.</p>
+        </div>
+        <div class="page-section" id="data-kelas">
+          <h3>Data Kelas</h3>
+          <p>Atur kelas, wali kelas, dan komposisi siswa setiap periode.</p>
+        </div>
+        <div class="page-section" id="mata-pelajaran">
+          <h3>Mata Pelajaran</h3>
+          <p>Kelola daftar mata pelajaran dan alokasi jam pelajaran.</p>
+        </div>
+        <div class="page-section" id="jadwal-pelajaran">
+          <h3>Jadwal Pelajaran</h3>
+          <p>Buat dan atur jadwal pelajaran untuk setiap kelas dan semester.</p>
+        </div>
+        <div class="page-section" id="absensi">
+          <h3>Absensi</h3>
+          <p>Catat kehadiran siswa dan pantau rekap absensi bulanan.</p>
+        </div>
+
+        <div class="page-section" id="input-nilai">
+          <h3>Input Nilai</h3>
+          <p>Masukkan nilai siswa untuk penilaian harian, ulangan, dan tugas.</p>
+        </div>
+        <div class="page-section" id="data-nilai">
+          <h3>Data Nilai</h3>
+          <p>Lihat dan kelola nilai akademik siswa secara lengkap.</p>
+        </div>
+        <div class="page-section" id="rapor">
+          <h3>Rapor</h3>
+          <p>Cetak rapor siswa dan lihat ringkasan perkembangan belajar.</p>
+        </div>
+        <div class="page-section" id="transkrip-nilai">
+          <h3>Transkrip Nilai</h3>
+          <p>Hasil transkrip nilai untuk siswa yang pindah atau lulus.</p>
+        </div>
+
+        <div class="page-section" id="spp">
+          <h3>SPP</h3>
+          <p>Atur besaran SPP, jadwal pembayaran, dan informasi tagihan siswa.</p>
+        </div>
+        <div class="page-section" id="pembayaran">
+          <h3>Pembayaran</h3>
+          <p>Catat transaksi pembayaran SPP dan konfirmasi pembayaran masuk.</p>
+        </div>
+        <div class="page-section" id="pemasukan">
+          <h3>Pemasukan</h3>
+          <p>Kelola semua pemasukan sekolah dan rekonsiliasi anggaran.</p>
+        </div>
+        <div class="page-section" id="pengeluaran">
+          <h3>Pengeluaran</h3>
+          <p>Catat pengeluaran operasional dan kebutuhan sekolah.</p>
+        </div>
+
+        <div class="page-section" id="buku">
+          <h3>Buku</h3>
+          <p>Kelola daftar buku perpustakaan dan ketersediaan judul.</p>
+        </div>
+        <div class="page-section" id="peminjaman">
+          <h3>Peminjaman</h3>
+          <p>Atur peminjaman buku siswa dan durasi pengembalian.</p>
+        </div>
+        <div class="page-section" id="pengembalian">
+          <h3>Pengembalian</h3>
+          <p>Kelola pengembalian buku perpustakaan dan histori transaksi.</p>
+        </div>
+
+        <div class="page-section" id="laporan-siswa">
+          <h3>Laporan Siswa</h3>
+          <p>Ekspor laporan siswa per kelas atau angkatan.</p>
+        </div>
+        <div class="page-section" id="laporan-guru">
+          <h3>Laporan Guru</h3>
+          <p>Ekspor laporan guru dan distribusi beban mengajar.</p>
+        </div>
+        <div class="page-section" id="laporan-nilai">
+          <h3>Laporan Nilai</h3>
+          <p>Lihat laporan nilai siswa dan tren pencapaian akademik.</p>
+        </div>
+        <div class="page-section" id="laporan-absensi">
+          <h3>Laporan Absensi</h3>
+          <p>Laporan absensi siswa secara per bulan dan persentase kehadiran.</p>
+        </div>
+        <div class="page-section" id="laporan-ppdb">
+          <h3>Laporan PPDB</h3>
+          <p>Laporan proses pendaftaran siswa baru dan hasil seleksi.</p>
+        </div>
+        <div class="page-section" id="laporan-keuangan">
+          <h3>Laporan Keuangan</h3>
+          <p>Laporan pemasukan dan pengeluaran untuk akuntabilitas sekolah.</p>
+        </div>
+
+        <div class="page-section" id="jurusan">
+          <h3>Jurusan</h3>
+          <p>Atur daftar jurusan yang tersedia di sekolah.</p>
+        </div>
+        <div class="page-section" id="tahun-ajaran">
+          <h3>Tahun Ajaran</h3>
+          <p>Kelola periode tahun ajaran dan status tahun berjalan.</p>
+        </div>
+        <div class="page-section" id="semester">
+          <h3>Semester</h3>
+          <p>Atur semester ganjil dan genap untuk tahun ajaran aktif.</p>
+        </div>
+        <div class="page-section" id="pengguna">
+          <h3>Pengguna</h3>
+          <p>Kelola akun pengguna, peran, dan hak akses sistem.</p>
+        </div>
+
+        <div class="page-section" id="profil-sekolah">
+          <h3>Profil Sekolah</h3>
+          <p>Edit informasi sekolah seperti nama, alamat, dan visi misi.</p>
+        </div>
+        <div class="page-section" id="hak-akses">
+          <h3>Hak Akses</h3>
+          <p>Atur hak akses menu dan peran pengguna sistem.</p>
+        </div>
+        <div class="page-section" id="backup-database">
+          <h3>Backup Database</h3>
+          <p>Jadwalkan backup database dan unduh salinan data.</p>
+        </div>
+        <div class="page-section" id="log-aktivitas">
+          <h3>Log Aktivitas</h3>
+          <p>Pantau aktivitas pengguna dan audit sistem.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
