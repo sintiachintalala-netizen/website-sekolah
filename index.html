@@ -6,30 +6,34 @@
   <title>Website Sekolah</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MQ6xPu9lmHONpKqzaFkXSkzJ0e4TmFV/Fs4bPFPv23nWtd/2Q6L5WjAoucG5xOcn" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-LX6gEdu1O+cjHc0ioXItdmMByTqbOxiwL0F1mkxW6eY4GtdI5TGt4GrgVqgV3lkcG5pI4cXtAX5VJZhswLHOfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
       <div class="sidebar-brand">
-        <h1>SI Sekolah</h1>
-        <p>Manajemen Sekolah</p>
+        <div class="brand-icon"><i class="fas fa-school"></i></div>
+        <div>
+          <h1>SI Sekolah</h1>
+          <p>ERP Sekolah Negeri</p>
+        </div>
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="#dashboard" class="menu-link active" data-section="dashboard">Dashboard</a></li>
+          <li><a href="#dashboard" class="menu-link active" data-section="dashboard"><i class="fas fa-chart-pie"></i>Dashboard</a></li>
           <li class="menu-header">PPDB</li>
-          <li><a href="#pendaftaran" class="menu-link" data-section="pendaftaran">Pendaftaran</a></li>
-          <li><a href="#data-pendaftar" class="menu-link" data-section="data-pendaftar">Data Pendaftar</a></li>
-          <li><a href="#verifikasi" class="menu-link" data-section="verifikasi">Verifikasi</a></li>
-          <li><a href="#hasil-seleksi" class="menu-link" data-section="hasil-seleksi">Hasil Seleksi</a></li>
+          <li><a href="#pendaftaran" class="menu-link" data-section="pendaftaran"><i class="fas fa-user-plus"></i>Pendaftaran</a></li>
+          <li><a href="#data-pendaftar" class="menu-link" data-section="data-pendaftar"><i class="fas fa-users"></i>Data Pendaftar</a></li>
+          <li><a href="#verifikasi" class="menu-link" data-section="verifikasi"><i class="fas fa-check-circle"></i>Verifikasi</a></li>
+          <li><a href="#hasil-seleksi" class="menu-link" data-section="hasil-seleksi"><i class="fas fa-tasks"></i>Hasil Seleksi</a></li>
           <li class="menu-header">Akademik</li>
-          <li><a href="#data-siswa" class="menu-link" data-section="data-siswa">Data Siswa</a></li>
-          <li><a href="#data-guru" class="menu-link" data-section="data-guru">Data Guru</a></li>
-          <li><a href="#data-kelas" class="menu-link" data-section="data-kelas">Data Kelas</a></li>
-          <li><a href="#mata-pelajaran" class="menu-link" data-section="mata-pelajaran">Mata Pelajaran</a></li>
-          <li><a href="#jadwal-pelajaran" class="menu-link" data-section="jadwal-pelajaran">Jadwal Pelajaran</a></li>
-          <li><a href="#absensi" class="menu-link" data-section="absensi">Absensi</a></li>
+          <li><a href="#data-siswa" class="menu-link" data-section="data-siswa"><i class="fas fa-user-graduate"></i>Data Siswa</a></li>
+          <li><a href="#data-guru" class="menu-link" data-section="data-guru"><i class="fas fa-chalkboard-teacher"></i>Data Guru</a></li>
+          <li><a href="#data-kelas" class="menu-link" data-section="data-kelas"><i class="fas fa-school"></i>Data Kelas</a></li>
+          <li><a href="#mata-pelajaran" class="menu-link" data-section="mata-pelajaran"><i class="fas fa-book"></i>Mata Pelajaran</a></li>
+          <li><a href="#jadwal-pelajaran" class="menu-link" data-section="jadwal-pelajaran"><i class="fas fa-calendar-alt"></i>Jadwal Pelajaran</a></li>
+          <li><a href="#absensi" class="menu-link" data-section="absensi"><i class="fas fa-clipboard-list"></i>Absensi</a></li>
           <li class="menu-header">Penilaian</li>
           <li><a href="#input-nilai" class="menu-link" data-section="input-nilai">Input Nilai</a></li>
           <li><a href="#data-nilai" class="menu-link" data-section="data-nilai">Data Nilai</a></li>
@@ -152,12 +156,12 @@
         <div class="page-section" id="pendaftaran">
           <h3>Form Pendaftaran PPDB</h3>
           <div class="toolbar">
-            <button class="button">Simpan</button>
-            <button class="button-secondary">Edit</button>
-            <button class="button-secondary">Hapus</button>
-            <button class="button-secondary">Cetak Formulir</button>
+            <button id="btn-save-ppdb" class="button">Simpan</button>
+            <button id="btn-edit-ppdb" class="button-secondary">Edit</button>
+            <button id="btn-delete-ppdb" class="button-secondary">Hapus</button>
+            <button id="btn-print-form" class="button-secondary">Cetak Formulir</button>
           </div>
-          <form class="form-grid">
+          <form class="form-grid" id="form-ppdb">
             <div class="form-group">
               <label for="nomor-pendaftaran">Nomor Pendaftaran</label>
               <input type="text" id="nomor-pendaftaran" placeholder="PPDB-2026-001" />
@@ -261,7 +265,7 @@
         <div class="page-section" id="data-pendaftar">
           <h3>Data Pendaftar</h3>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-data-pendaftar" class="table">
               <thead>
                 <tr>
                   <th>Nomor</th>
@@ -303,13 +307,13 @@
         <div class="page-section" id="data-siswa">
           <h3>Master Data Siswa</h3>
           <div class="toolbar">
-            <button class="button">Tambah</button>
-            <button class="button-secondary">Import Excel</button>
-            <button class="button-secondary">Export Excel</button>
-            <button class="button-secondary">Export PDF</button>
+            <button id="btn-add-siswa" class="button">Tambah</button>
+            <button id="btn-import-siswa" class="button-secondary">Import Excel</button>
+            <button id="btn-export-siswa" class="button-secondary">Export CSV</button>
+            <button id="btn-print-siswa" class="button-secondary">Export PDF</button>
           </div>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-data-siswa" class="table data-table">
               <thead>
                 <tr>
                   <th>NIS</th>
@@ -345,7 +349,7 @@
         <div class="page-section" id="data-guru">
           <h3>Data Guru</h3>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-data-guru" class="table data-table">
               <thead>
                 <tr>
                   <th>NIP</th>
@@ -381,7 +385,7 @@
         <div class="page-section" id="data-kelas">
           <h3>Data Kelas</h3>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-data-kelas" class="table data-table">
               <thead>
                 <tr>
                   <th>Nama Kelas</th>
@@ -414,7 +418,7 @@
         <div class="page-section" id="mata-pelajaran">
           <h3>Mata Pelajaran</h3>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-mata-pelajaran" class="table data-table">
               <thead>
                 <tr>
                   <th>Kode Mapel</th>
@@ -444,11 +448,11 @@
         <div class="page-section" id="jadwal-pelajaran">
           <h3>Jadwal Pelajaran</h3>
           <div class="toolbar">
-            <button class="button">Generate Jadwal</button>
-            <button class="button-secondary">Cetak Jadwal</button>
+            <button id="btn-generate-jadwal" class="button">Generate Jadwal</button>
+            <button id="btn-print-jadwal" class="button-secondary">Cetak Jadwal</button>
           </div>
           <div class="table-responsive">
-            <table class="table">
+            <table id="table-jadwal" class="table data-table">
               <thead>
                 <tr>
                   <th>Hari</th>
@@ -490,7 +494,7 @@
             </div>
             <div class="card chart-card">
               <h4>Rekap Kehadiran</h4>
-              <div class="chart-placeholder">[Rekap Bulanan]</div>
+              <canvas id="absensiChart" height="220"></canvas>
             </div>
           </div>
         </div>
@@ -535,6 +539,10 @@
               <p class="metric">(30% Tugas) + (30% Ulangan) + (20% UTS) + (20% UAS)</p>
             </div>
           </form>
+          <div class="toolbar">
+            <button id="btn-save-nilai" class="button">Simpan Nilai</button>
+            <button id="btn-clear-nilai" class="button-secondary">Kosongkan</button>
+          </div>
         </div>
 
         <div class="page-section" id="data-nilai">
@@ -657,6 +665,43 @@
         <div class="page-section" id="pengguna">
           <h3>Pengguna</h3>
           <p>Kelola akun pengguna, peran, dan hak akses sistem.</p>
+          <div class="role-summary-grid">
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-user-shield"></i></div>
+              <h4>Super Admin</h4>
+              <p>Mengelola seluruh sistem, konfigurasi, keamanan, dan hak akses.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-building"></i></div>
+              <h4>Admin Sekolah</h4>
+              <p>Mengelola data sekolah lengkap, peserta didik, guru, dan master data.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-chart-line"></i></div>
+              <h4>Kepala Sekolah</h4>
+              <p>Melihat laporan, statistik, ringkasan kinerja, dan hasil evaluasi sekolah.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+              <h4>Guru</h4>
+              <p>Input nilai, absensi, serta memantau progres kehadiran dan pembelajaran siswa.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-users"></i></div>
+              <h4>Wali Kelas</h4>
+              <p>Mengelola siswa per kelas, data bimbingan, dan pencatatan aktivitas kelas.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-user-graduate"></i></div>
+              <h4>Siswa</h4>
+              <p>Melihat nilai, absensi, rapor, dan perkembangan akademik pribadi.</p>
+            </div>
+            <div class="role-card">
+              <div class="role-icon"><i class="fas fa-user-friends"></i></div>
+              <h4>Orang Tua</h4>
+              <p>Memantau perkembangan siswa, absensi, dan prestasi akademik anak.</p>
+            </div>
+          </div>
         </div>
 
         <div class="page-section" id="profil-sekolah">
@@ -665,7 +710,18 @@
         </div>
         <div class="page-section" id="hak-akses">
           <h3>Hak Akses</h3>
-          <p>Atur hak akses menu dan peran pengguna sistem.</p>
+          <p>Atur hak akses menu dan peran pengguna sistem. Sistem mendukung role-based access control untuk memastikan setiap peran hanya melihat dan mengubah data yang sesuai.</p>
+          <div class="role-access-list">
+            <ul>
+              <li><strong>Super Admin</strong> - penuh akses ke semua modul dan pengaturan sistem.</li>
+              <li><strong>Admin Sekolah</strong> - fokus pada manajemen data sekolah, PPDB, dan master data.</li>
+              <li><strong>Kepala Sekolah</strong> - melihat laporan, statistik, dan ringkasan operasional.</li>
+              <li><strong>Guru</strong> - input nilai, absensi, dan data pembelajaran.</li>
+              <li><strong>Wali Kelas</strong> - mengelola siswa per kelas dan memantau perkembangan kelas.</li>
+              <li><strong>Siswa</strong> - melihat nilai, absensi, dan rapor.</li>
+              <li><strong>Orang Tua</strong> - memantau perkembangan akademik dan kehadiran anak.</li>
+            </ul>
+          </div>
         </div>
         <div class="page-section" id="backup-database">
           <h3>Backup Database</h3>
