@@ -104,6 +104,12 @@ body {
   position: relative;
 }
 
+.menu-link:hover,
+.menu-link.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
 .menu-link i {
   width: 18px;
   text-align: center;
@@ -443,6 +449,8 @@ body {
 
 .table tbody tr:hover {
   background: rgba(59, 130, 246, 0.05);
+}
+
 .status-chip {
   display: inline-flex;
   padding: 6px 12px;
