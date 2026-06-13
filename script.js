@@ -72,10 +72,115 @@ function computeFinalScore() {
     categoryInput.value = finalScore ? kategori : '';
   }
 
-  const finalScoreDisplay = document.getElementById('nilai-akhir');
-  if (finalScoreDisplay) {
-    finalScoreDisplay.textContent = finalScore ? finalScore.toFixed(1) : '-';
+  const finalScoreInput = document.getElementById('nilai-akhir');
+  if (finalScoreInput) {
+    finalScoreInput.value = finalScore ? finalScore.toFixed(1) : '';
   }
+}
+
+function createChart(ctx, type, labels, data, label, color) {
+  return new Chart(ctx, {
+    type,
+    data: {
+      labels,
+      datasets: [{
+        label,
+        data,
+        fill: type === 'line',
+        backgroundColor: type === 'bar' ? color.background : `${color.background}`,
+        borderColor: color.border,
+        borderWidth: 2,
+        tension: 0.4,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+}
+
+function initializeCharts() {
+  const attendanceCtx = document.getElementById('attendanceChart');
+  const gradeCtx = document.getElementById('gradeChart');
+  const registrationCtx = document.getElementById('registrationChart');
+  const graduationCtx = document.getElementById('graduationChart');
+
+  if (attendanceCtx) {
+    createChart(attendanceCtx, 'line', ['Sen', 'Sel', 'Rab', 'Kam', 'Jum'], [90, 92, 91, 93, 92], 'Kehadiran', {
+      background: 'rgba(14, 165, 233, 0.2)',
+      border: '#0ea5e9'
+    });
+  }
+
+  if (gradeCtx) {
+    createChart(gradeCtx, 'bar', ['Jan', 'Feb', 'Mar', 'Apr', 'Mei'], [85, 88, 84, 90, 87], 'Nilai Rata-rata', {
+      background: 'rgba(16, 185, 129, 0.2)',
+      border: '#10b981'
+    });
+  }
+
+  if (registrationCtx) {
+    createChart(registrationCtx, 'line', ['Jan', 'Feb', 'Mar', 'Apr', 'Mei'], [120, 130, 140, 150, 160], 'Pendaftaran', {
+      background: 'rgba(251, 191, 36, 0.2)',
+      border: '#fbbf24'
+    });
+  }
+
+  if (graduationCtx) {
+    createChart(graduationCtx, 'bar', ['2021', '2022', '2023', '2024', '2025'], [75, 78, 82, 85, 88], 'Persentase Lulus', {
+      background: 'rgba(236, 72, 153, 0.2)',
+      border: '#ec4899'
+    });
+  }
+}
+
+function initializeDataTables() {
+  if (window.jQuery && $.fn.DataTable) {
+    $('.table').DataTable({
+      responsive: true,
+      pageLength: 5,
+      lengthChange: false,
+      searching: true,
+      info: false,
+    });
+  }
+}
+
+function loadPendaftarData() {
+  return $.Deferred((defer) => {
+    setTimeout(() => {
+      defer.resolve([
+        { no: 'PPDB-001', nama: 'Alya Putri', jurusan: 'Teknik Informatika', asal: 'SMPN 5', status: 'Menunggu' },
+        { no: 'PPDB-002', nama: 'Rafi Hidayat', jurusan: 'Akuntansi', asal: 'SMPN 2', status: 'Diterima' },
+        { no: 'PPDB-003', nama: 'Dina Rahma', jurusan: 'Administrasi Perkantoran', asal: 'SMPN 8', status: 'Ditolak' }
+      ]);
+    }, 400);
+  }).promise();
+}
+
+function renderPendaftarTable(data) {
+  const tbody = $('#data-pendaftar tbody');
+  if (!tbody.length) {
+    return;
+  }
+
+  const rows = data.map((item) => `
+    <tr>
+      <td>${item.no}</td>
+      <td>${item.nama}</td>
+      <td>${item.jurusan}</td>
+      <td>${item.asal}</td>
+      <td><span class="status-chip ${item.status === 'Diterima' ? 'status-approved' : item.status === 'Menunggu' ? 'status-pending' : ''}">${item.status}</span></td>
+    </tr>
+  `).join('');
+
+  tbody.html(rows);
 }
 
 menuLinks.forEach((link) => {
@@ -100,6 +205,12 @@ window.addEventListener('popstate', (event) => {
     sectionId = 'dashboard';
   }
   setActiveSection(sectionId);
+});
+
+window.addEventListener('load', () => {
+  initializeCharts();
+  initializeDataTables();
+  loadPendaftarData().then(renderPendaftarTable);
 });
 
 let initialSection = window.location.hash.replace('#', '') || 'dashboard';

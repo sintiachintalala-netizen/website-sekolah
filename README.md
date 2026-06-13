@@ -55,6 +55,35 @@ Aplikasi website sekolah sederhana dengan sidebar menu sesuai struktur modul ber
 
 ## File utama
 
-- `index.html` - Struktur halaman dan sidebar.
+- `index.html` - Struktur halaman, sidebar, dan integrasi Bootstrap / Chart.js / DataTables.
 - `styles.css` - Styling tampilan dan layout.
-- `script.js` - Navigasi konten dinamis.
+- `script.js` - Navigasi konten dinamis, kalkulasi nilai, chart, dan DataTables.
+
+## Teknologi yang digunakan
+
+### Frontend
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript ES6
+- AJAX (simulasi dengan jQuery Deferred)
+- DataTables
+- Chart.js
+
+### Backend
+
+- Laravel 11 (PHP 8.3) - placeholder, belum terimplementasi di repositori ini
+
+### Database
+
+- MySQL 8 (placeholder)
+
+### Keamanan
+
+- Authentication Login (placeholder)
+- Role Permission (placeholder)
+- CSRF Protection (placeholder)
+- Password Hashing (placeholder)
+- Session Management (placeholder)
+- Activity Log (placeholder)
