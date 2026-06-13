@@ -88,6 +88,8 @@ body {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
 .menu-link {
   display: flex;
   align-items: center;
