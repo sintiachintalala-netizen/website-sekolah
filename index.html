@@ -597,19 +597,166 @@
 
         <div class="page-section" id="spp">
           <h3>SPP</h3>
-          <p>Atur besaran SPP, jadwal pembayaran, dan informasi tagihan siswa.</p>
+          <div class="section-panel-grid">
+            <div class="card info-card">
+              <h4>Ringkasan SPP</h4>
+              <p>Atur besaran SPP, jadwal pembayaran siswa, dan pengecekan tagihan.</p>
+              <ul class="compact-list">
+                <li>Tarif SPP per bulan: <strong>Rp 350.000</strong></li>
+                <li>Jumlah tagihan aktif: <strong>950</strong></li>
+                <li>Status terbayar: <strong>82%</strong></li>
+              </ul>
+            </div>
+            <div class="table-responsive">
+              <table class="table data-table">
+                <thead>
+                  <tr>
+                    <th>Kelas</th>
+                    <th>Tarif</th>
+                    <th>Periode</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>X IPA 1</td>
+                    <td>Rp 350.000</td>
+                    <td>2026/2027</td>
+                    <td><span class="status-chip status-approved">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td>X IPS 1</td>
+                    <td>Rp 350.000</td>
+                    <td>2026/2027</td>
+                    <td><span class="status-chip status-approved">Aktif</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="page-section" id="pembayaran">
           <h3>Pembayaran</h3>
-          <p>Catat transaksi pembayaran SPP dan konfirmasi pembayaran masuk.</p>
+          <div class="section-panel-grid">
+            <div class="card info-card">
+              <h4>Transaksi Terbaru</h4>
+              <p>Catat pembayaran SPP dan periksa bukti transaksi siswa.</p>
+              <ul class="compact-list">
+                <li>Total transaksi hari ini: <strong>42</strong></li>
+                <li>Pembayaran valid: <strong>39</strong></li>
+                <li>Menunggu konfirmasi: <strong>3</strong></li>
+              </ul>
+            </div>
+            <div class="table-responsive">
+              <table class="table data-table">
+                <thead>
+                  <tr>
+                    <th>ID Bayar</th>
+                    <th>Siswa</th>
+                    <th>Kelas</th>
+                    <th>Jumlah</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PYM-001</td>
+                    <td>Rafi Hidayat</td>
+                    <td>X IPS 1</td>
+                    <td>Rp 350.000</td>
+                    <td><span class="status-chip status-approved">Lunas</span></td>
+                  </tr>
+                  <tr>
+                    <td>PYM-002</td>
+                    <td>Fina Maulida</td>
+                    <td>X IPA 2</td>
+                    <td>Rp 350.000</td>
+                    <td><span class="status-chip status-pending">Menunggu</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="page-section" id="pemasukan">
           <h3>Pemasukan</h3>
-          <p>Kelola semua pemasukan sekolah dan rekonsiliasi anggaran.</p>
+          <div class="section-panel-grid">
+            <div class="card info-card">
+              <h4>Ringkasan Pemasukan</h4>
+              <p>Kelola semua pemasukan sekolah dan rekonsiliasi anggaran.</p>
+              <ul class="compact-list">
+                <li>Total pemasukan bulan ini: <strong>Rp 150.000.000</strong></li>
+                <li>Penerimaan lain: <strong>Rp 25.000.000</strong></li>
+                <li>Target anggaran: <strong>95%</strong></li>
+              </ul>
+            </div>
+            <div class="table-responsive">
+              <table class="table data-table">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Sumber</th>
+                    <th>Jumlah</th>
+                    <th>Keterangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10 Jun 2026</td>
+                    <td>SPP</td>
+                    <td>Rp 110.000.000</td>
+                    <td>Pembayaran SPP bulan Juni</td>
+                  </tr>
+                  <tr>
+                    <td>12 Jun 2026</td>
+                    <td>Donasi</td>
+                    <td>Rp 20.000.000</td>
+                    <td>Donasi alumni</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
         <div class="page-section" id="pengeluaran">
           <h3>Pengeluaran</h3>
-          <p>Catat pengeluaran operasional dan kebutuhan sekolah.</p>
+          <div class="section-panel-grid">
+            <div class="card info-card">
+              <h4>Ringkasan Pengeluaran</h4>
+              <p>Catat pengeluaran operasional dan kebutuhan sekolah.</p>
+              <ul class="compact-list">
+                <li>Total pengeluaran bulan ini: <strong>Rp 95.000.000</strong></li>
+                <li>Pengeluaran rutin: <strong>Rp 70.000.000</strong></li>
+                <li>Biaya darurat: <strong>Rp 5.000.000</strong></li>
+              </ul>
+            </div>
+            <div class="table-responsive">
+              <table class="table data-table">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Jenis</th>
+                    <th>Jumlah</th>
+                    <th>Untuk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09 Jun 2026</td>
+                    <td>Gaji</td>
+                    <td>Rp 45.000.000</td>
+                    <td>Gaji guru dan staf</td>
+                  </tr>
+                  <tr>
+                    <td>14 Jun 2026</td>
+                    <td>Operasional</td>
+                    <td>Rp 15.000.000</td>
+                    <td>Perawatan gedung</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
         <div class="page-section" id="buku">
